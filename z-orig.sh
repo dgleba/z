@@ -62,7 +62,7 @@ _z() {
                 rank[path] = 1
                 time[path] = now
             }
-            $2 >= -9991 {    # 2017-04-12 David Gleba dont get rid of entries. it was 1, now -9991
+            $2 >= 1 {
                 # drop ranks below 1
                 if( $1 == path ) {
                     rank[$1] = $2 + 1
@@ -76,7 +76,7 @@ _z() {
             END {
                 if( count > 9000 ) {
                     # aging
-                    for( x in rank ) print x "|" 0.9999*rank[x] "|" time[x]  # was .99, now .9999 David Gleba 2017-04-12
+                    for( x in rank ) print x "|" 0.99*rank[x] "|" time[x]
                 } else for( x in rank ) print x "|" rank[x] "|" time[x]
             }
         ' 2>/dev/null >| "$tempfile"
