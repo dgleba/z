@@ -137,8 +137,8 @@ _z() {
                 # relate frequency and time
                 dx = t - time
                 if( dx < 3600 ) return rank * 4
-                if( dx < 86400 ) return rank * 3.5
-                if( dx < 604800 ) return rank / 3
+                if( dx < 86400 ) return rank * 3.9
+                if( dx < 604800 ) return rank / 3.5
                 return rank / 4
             }
             function output(files, out, common) {
