@@ -59,7 +59,7 @@ _z() {
         local tempfile="$datafile.$RANDOM"
         awk < <(_z_dirs 2>/dev/null) -v path="$*" -v now="$(date +%s)" -F"|" '
             BEGIN {
-                rank[path] = 10
+                rank[path] = 100
                 time[path] = now
             }
             $2 >= -9991 {    # 2017-04-12 David Gleba dont get rid of entries. it was 1, now -9991
