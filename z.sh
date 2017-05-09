@@ -76,7 +76,7 @@ _z() {
             END {
                 if( count > 9000 ) {
                     # aging
-                    for( x in rank ) print x "|" 0.9999*rank[x] "|" time[x]  # was .99, now .9999 David Gleba 2017-04-12
+                    for( x in rank ) print x "|" 0.98*rank[x] "|" time[x]  # was .99, now .9999 David Gleba 2017-04-12
                 } else for( x in rank ) print x "|" rank[x] "|" time[x]
             }
         ' 2>/dev/null >| "$tempfile"
@@ -137,8 +137,8 @@ _z() {
                 # relate frequency and time
                 dx = t - time
                 if( dx < 3600 ) return rank * 4
-                if( dx < 86400 ) return rank * 2
-                if( dx < 604800 ) return rank / 2
+                if( dx < 86400 ) return rank * 3.5
+                if( dx < 604800 ) return rank / 3
                 return rank / 4
             }
             function output(files, out, common) {
