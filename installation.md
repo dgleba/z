@@ -1,3 +1,6 @@
+## I install it this way..
+
+```
   cd $HOME
   mkdir -p $HOME/bin
   git clone https://github.com/dgleba/z.git  bin/zjump
@@ -11,3 +14,4 @@
   cd
   z
   z
+```
