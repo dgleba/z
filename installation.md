@@ -1,3 +1,11 @@
+
+# Fork info
+
+I made this fork of rupa/z to remove the aging and change the frecency calculation to items don't disappear from the list of folders so quickly.
+
+David Gleba
+
+
 ## I install it this way..
 
 ```
